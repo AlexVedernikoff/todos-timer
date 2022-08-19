@@ -172,7 +172,7 @@ export default class App extends Component {
           newItem,
           ...todoData.slice(idx + 1)
         ];
-        //localStorage.setItem("todoData", JSON.stringify(newArray));
+        localStorage.setItem("todoData", JSON.stringify(newArray));
         return {
           todoData: newArray
         };
@@ -226,7 +226,7 @@ export default class App extends Component {
       return this.newData;
     } else {
       this.newData = this.state.todoData;
-      //localStorage.setItem("todoData", JSON.stringify(this.state.todoData));
+      localStorage.setItem("todoData", JSON.stringify(this.state.todoData));
       return this.state.todoData;
     }
   }
