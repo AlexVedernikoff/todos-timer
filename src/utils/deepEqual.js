@@ -1,3 +1,4 @@
+/* eslint-disable */
 const deepEqual = (obj1, obj2, isEqual = true) => {
   if (
     typeof obj1 != "object" ||

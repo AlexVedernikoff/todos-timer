@@ -10,13 +10,12 @@ export default class NewTaskForm extends Component {
   };
 
   onLabelChange = (event) => {
-    console.log("Вы вызвали функцию onLabelChange");
-    console.log(event.target.value);
+    // console.log("Вы вызвали функцию onLabelChange");
+    // console.log(event.target.value);
     this.setState({ label: event.target.value });
   };
 
   onChangeTime = (event) => {
-    console.log(`Мы внутри функции onChangeTime`);
     const { value, name } = event.target;
 
     if (value.trim() && value <= 59 && value >= 0 && !Number.isNaN(value)) {
@@ -29,7 +28,6 @@ export default class NewTaskForm extends Component {
 
   onSubmit = (event) => {
     const { label, min, sec } = this.state;
-    console.log(`Вы внутри функции onSubmit в newTaskForm`);
     event.preventDefault();
     this.props.onItemAdded(label, min, sec);
     this.setState({
@@ -51,7 +49,7 @@ export default class NewTaskForm extends Component {
           value={label}
           autoFocus
           required
-        ></input>
+        />
         <input
           className="new-todo-form__timer"
           placeholder="Min"
@@ -59,7 +57,7 @@ export default class NewTaskForm extends Component {
           value={min}
           onChange={this.onChangeTime}
           required
-        ></input>
+        />
         <input
           className="new-todo-form__timer"
           placeholder="Sec"
@@ -67,7 +65,7 @@ export default class NewTaskForm extends Component {
           value={sec}
           onChange={this.onChangeTime}
           required
-        ></input>
+        />
         <input className="new-todo-form__submit" type="submit" />
       </form>
     );

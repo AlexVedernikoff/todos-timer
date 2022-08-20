@@ -57,6 +57,11 @@
     "no-else-return": [0],
     "no-unneeded-ternary": [0],
     "default-param-last" :[0],
+    "react/no-unused-state" : [0],
+    "no-shadow": [0],
+    "react/function-component-definition": [0],
+    "react/no-access-state-in-setstate": [0],
+    "jsx-a11y/label-has-associated-control": [0],
     "prettier/prettier": [
       "error",
       {

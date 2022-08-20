@@ -1,11 +1,10 @@
-//Тестируем git111122222222222222222222
 import React, { Component } from "react";
 import { formatDistance } from "date-fns";
 
 import "./app.css";
 
 import TaskList from "../taskList";
-import Footer from "../footer/";
+import Footer from "../footer";
 import NewTaskForm from "../newTaskForm";
 import deepEqual from "../../utils/deepEqual";
 
@@ -179,7 +178,7 @@ export default class App extends Component {
   componentDidMount() {
     this.setState({ todoData: this.newData });
     this.newTime = setInterval(() => {
-      const stringArray = this.state.todoData.map((element, i) => {
+      const stringArray = this.state.todoData.map((element) => {
         if (element.string) {
           return formatDistance(new Date(), new Date(element.timeStamp), {
             includeSeconds: true
@@ -187,9 +186,9 @@ export default class App extends Component {
         } else return null;
       });
       this.newData = this.updateTime(this.newData, stringArray);
-      this.setState(() => {
+      this.setState(({ todoData }) => {
         return {
-          todoData: this.updateTime(this.state.todoData, stringArray)
+          todoData: this.updateTime(todoData, stringArray)
         };
       });
     }, 4000);
