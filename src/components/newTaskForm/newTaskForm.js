@@ -49,7 +49,7 @@ export default class NewTaskForm extends Component {
           value={label}
           autoFocus
           required
-        />
+        ></input>
         <input
           className="new-todo-form__timer"
           placeholder="Min"
@@ -57,7 +57,7 @@ export default class NewTaskForm extends Component {
           value={min}
           onChange={this.onChangeTime}
           required
-        />
+        ></input>
         <input
           className="new-todo-form__timer"
           placeholder="Sec"
@@ -65,7 +65,7 @@ export default class NewTaskForm extends Component {
           value={sec}
           onChange={this.onChangeTime}
           required
-        />
+        ></input>
         <input className="new-todo-form__submit" type="submit" />
       </form>
     );

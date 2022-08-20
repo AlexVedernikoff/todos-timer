@@ -112,21 +112,19 @@ export default class Task extends Component {
             />
             <label>
               <span className="title">
-                <button type="button" id="1" onClick={this.props.onToggleDone}>
+                <button id="1" onClick={this.props.onToggleDone}>
                   {this.state.label}
                 </button>
               </span>
               <span className="description">
                 <button
-                  type="button"
                   className="icon icon-play"
                   onClick={this.onCreateTimer}
-                />
+                ></button>
                 <button
-                  type="button"
                   className="icon icon-pause"
                   onClick={this.onDeleteTimer}
-                />
+                ></button>
                 <span className={this.isTimeElapsed}>
                   {`${String(min).padStart(2, "0")}:
                   ${String(sec).padStart(2, "0")}`}
@@ -135,7 +133,6 @@ export default class Task extends Component {
               <span className="description">{time}</span>
             </label>
             <button
-              type="button"
               className="icon icon-edit"
               onClick={() => {
                 // console.log("Мы редактируем элемент списка");
@@ -143,12 +140,11 @@ export default class Task extends Component {
                 this.editing = true;
                 this.props.onEdit(this.props.id, this.newValue);
               }}
-            />
+            ></button>
             <button
-              type="button"
               className="icon icon-destroy"
               onClick={this.props.onDeleted}
-            />
+            ></button>
           </div>
         </li>
         <li className="editing">
@@ -162,7 +158,7 @@ export default class Task extends Component {
                 value={this.state.label}
                 ref={(input) => input && input.focus()}
                 autoFocus
-              />
+              ></input>
             </form>
           </div>
         </li>

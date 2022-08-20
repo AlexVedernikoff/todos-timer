@@ -10,11 +10,7 @@ const TaskFilter = ({ onToggleFilter, buttonsText, filter }) => {
     }
     return (
       <li key={i}>
-        <button
-          type="button"
-          className={className}
-          onClick={() => onToggleFilter(text)}
-        >
+        <button className={className} onClick={() => onToggleFilter(text)}>
           {text}
         </button>
       </li>

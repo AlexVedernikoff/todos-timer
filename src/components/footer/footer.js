@@ -14,11 +14,7 @@ const Footer = ({ toDo, onToggleFilter, clearCompleted, buttons, filter }) => {
         buttonsText={buttons}
         filter={filter}
       />
-      <button
-        type="button"
-        className="clear-completed"
-        onClick={() => clearCompleted()}
-      >
+      <button className="clear-completed" onClick={() => clearCompleted()}>
         Clear completed
       </button>
     </footer>
