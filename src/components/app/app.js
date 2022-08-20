@@ -112,7 +112,7 @@ export default class App extends Component {
     const newArray = arr.map((element, i) => {
       const newItem = element;
       newItem.string = stringArray[i];
-      const id = `time${newItem.id}`;
+      //const id = `time${newItem.id}`;
 
       //localStorage.setItem(id, JSON.stringify(newItem.string));
 
