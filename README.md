@@ -1,5 +1,5 @@
 # Ссылка на готовый проект на vercel
 
-https://todos-timer.vercel.app/
+https://todos-timer-ln5aeupj9-alexvedernikoff.vercel.app/
 
 
